@@ -1,0 +1,20 @@
+{
+  "host": "feathers-apollo-fb-app.feathersjs.com",
+  "port": 80,
+  "sqlite": "SQLITE_DB",
+  "public": "../public/",
+  "auth": {
+    "idField": "id",
+    "token": {
+      "secret": "FEATHERS_AUTH_SECRET"
+    },
+    "local": false,
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "permissions": {
+        "scope": ["public_profile","email"]
+      }
+    }
+  }
+}

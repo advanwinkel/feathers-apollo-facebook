@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feathers Authentication Success</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Helvetica Neue', 'Helevetica', 'Arial', 'sans-serif';
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    main {
+      padding: 100px 20px;
+    }
+
+    img.logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: block;
+      width: 180px;
+    }
+
+    h1 {
+      font-weight: 100;
+      font-size: 4em;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+
+    pre {
+      min-height: 100px;
+      border: 1px solid #EEE;
+      border-radius: 5px;
+      color: #555;
+      background: #f5f5f5;
+      padding: 10px;
+      overflow: hidden;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    .center-text {
+      text-align: center;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="center-text">Success</h1>
+    <h3 class="center-text">You are now logged in. We've stored your JWT in a cookie with the name <span class="italic">"feathers-jwt"</span> for you. It is:</h3>
+    <textarea rows="4" cols="50" id="token"></textarea>
+  </main>
+  <script type="text/javascript">
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    var token = getCookie('feathers-jwt');
+
+    var el = document.getElementById('token');
+    el.innerHTML = token;
+  </script>
+</body>
+</html>

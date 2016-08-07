@@ -1,0 +1,22 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "sqlite": "../data/feathersApolloFb.sqlite",
+  "public": "../public/",
+  "auth": {
+    "usernameField": "username",
+    "idField": "id",
+    "token": {
+      "secret": "WGdCBRqlSexRLASXx32FtXcI+UMqNMb2Y+RcC/KM2WhDQfCVzAzxDAiXxKa9/CKM0d3TlEjSBpfbh63pzE/IWQ=="
+    },
+    "local": false,
+    "successRedirect": "/success.html",
+    "facebook": {
+      "clientID": "1576399102654359",
+      "clientSecret": "1cbb4a61206617571ad8bd38c9b3ec0b",
+      "permissions": {
+        "scope": ["public_profile","email"]
+      }
+    }
+  }
+}
